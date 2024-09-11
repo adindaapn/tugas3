@@ -1,16 +1,17 @@
 <script setup>
-import { ref } from 'vue'; // Tambahkan ref untuk reactive data
+import { ref } from 'vue'; // Import ref untuk reactive data
+
+// Impor gambar lokal dari folder assets
+import image1 from '@/assets/image1.jpg';
+import image2 from '@/assets/image2.jpg';
+import image3 from '@/assets/image3.jpg';
 
 const count = ref(0); // Inisialisasi counter
 const boxColor = ref('lightgray'); // Inisialisasi warna box
 const currentImageIndex = ref(0); // Inisialisasi index gambar yang tampil saat ini
 
-// Daftar gambar untuk carousel
-const images = [
-  'https://via.placeholder.com/400x200?text=Image+1',
-  'https://via.placeholder.com/400x200?text=Image+2',
-  'https://via.placeholder.com/400x200?text=Image+3'
-];
+// Daftar gambar lokal untuk carousel
+const images = [image1, image2, image3];
 
 function increment() {
   count.value++; // Fungsi untuk menambah counter
